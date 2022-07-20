@@ -16,6 +16,7 @@
 		C3CBCEEA2888A2500037D6F5 /* AsyncBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBCEE92888A2500037D6F5 /* AsyncBridgeTests.swift */; };
 		C3CBCEF42888A2500037D6F5 /* AsyncBridgeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBCEF32888A2500037D6F5 /* AsyncBridgeUITests.swift */; };
 		C3CBCEF62888A2500037D6F5 /* AsyncBridgeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CBCEF52888A2500037D6F5 /* AsyncBridgeUITestsLaunchTests.swift */; };
+		C3CBCF042888A2720037D6F5 /* BridgeBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = C3CBCF032888A2720037D6F5 /* BridgeBuilder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,9 @@
 		C3CBCEEF2888A2500037D6F5 /* AsyncBridgeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AsyncBridgeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3CBCEF32888A2500037D6F5 /* AsyncBridgeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBridgeUITests.swift; sourceTree = "<group>"; };
 		C3CBCEF52888A2500037D6F5 /* AsyncBridgeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBridgeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C3CBCF022888A2710037D6F5 /* AsyncBridge-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AsyncBridge-Bridging-Header.h"; sourceTree = "<group>"; };
+		C3CBCF032888A2720037D6F5 /* BridgeBuilder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BridgeBuilder.m; sourceTree = "<group>"; };
+		C3CBCF052888A2E10037D6F5 /* BridgeBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgeBuilder.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,9 @@
 				C3CBCEDB2888A2500037D6F5 /* Assets.xcassets */,
 				C3CBCEDD2888A2500037D6F5 /* LaunchScreen.storyboard */,
 				C3CBCEE02888A2500037D6F5 /* Info.plist */,
+				C3CBCF052888A2E10037D6F5 /* BridgeBuilder.h */,
+				C3CBCF032888A2720037D6F5 /* BridgeBuilder.m */,
+				C3CBCF022888A2710037D6F5 /* AsyncBridge-Bridging-Header.h */,
 			);
 			path = AsyncBridge;
 			sourceTree = "<group>";
@@ -195,6 +202,7 @@
 				TargetAttributes = {
 					C3CBCECE2888A24F0037D6F5 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					C3CBCEE42888A2500037D6F5 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -260,6 +268,7 @@
 			files = (
 				C3CBCED72888A24F0037D6F5 /* ViewController.swift in Sources */,
 				C3CBCED32888A24F0037D6F5 /* AppDelegate.swift in Sources */,
+				C3CBCF042888A2720037D6F5 /* BridgeBuilder.m in Sources */,
 				C3CBCED52888A24F0037D6F5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L752KAGG62;
@@ -453,6 +463,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.risbeck.AsyncBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AsyncBridge/AsyncBridge-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -463,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L752KAGG62;
@@ -481,6 +494,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.risbeck.AsyncBridge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AsyncBridge/AsyncBridge-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -9,11 +9,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    let bb = BridgeBuilder()!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        Task.init {
+            await doSomeAsync()
+        }
     }
 
-
+    func doSomeAsync() async {
+//        bb?.someSlightlyComplicatedMethod(completion: { finished in
+//            print("finished: \(finished)")
+//        })
+        
+        let x = await bb.someSlightlyComplicatedMethod()
+        print("x: \(String(describing: x))")
+    }
 }
 
